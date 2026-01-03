@@ -1,9 +1,7 @@
 # Order Product Microservices
-![CI](https://github.com/adelenneb/order-product-microservices/actions/workflows/ci.yml/badge.svg)
+[![CI](https://github.com/adelenneb/order-product-microservices/actions/workflows/ci.yml/badge.svg)](https://github.com/adelenneb/order-product-microservices/actions/workflows/ci.yml)
 
-
-
-![CD](https://github.com/adelenneb/order-product-microservices/actions/workflows/cd.yml/badge.svg)
+[![CD](https://github.com/adelenneb/order-product-microservices/actions/workflows/cd.yml/badge.svg)](https://github.com/adelenneb/order-product-microservices/actions/workflows/cd.yml)
 
 
 
