@@ -8,6 +8,9 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    concurrency:
+      group: cd-build-${{ github.ref }}
+      cancel-in-progress: true
     env:
       REGISTRY: docker.io
       IMAGE_NAMESPACE: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -52,6 +55,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build-and-push
     if: ${{ secrets.KUBE_CONFIG != '' }}
+    concurrency:
+      group: cd-deploy-${{ github.ref }}
+      cancel-in-progress: true
     env:
       IMAGE_NAMESPACE: ${{ secrets.DOCKERHUB_USERNAME }}
       KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG }}
