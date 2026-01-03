@@ -1,7 +1,6 @@
 # Order Product Microservices
-[![CI](https://github.com/adelenneb/order-product-microservices/actions/workflows/ci.yml/badge.svg)](https://github.com/adelenneb/order-product-microservices/actions/workflows/ci.yml)
-
-[![CD](https://github.com/adelenneb/order-product-microservices/actions/workflows/cd.yml/badge.svg)](https://github.com/adelenneb/order-product-microservices/actions/workflows/cd.yml)
+[![CI](https://github.com/adelenneb/order-product-microservices/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/adelenneb/order-product-microservices/actions/workflows/ci.yml)
+[![CD](https://github.com/adelenneb/order-product-microservices/actions/workflows/cd.yml/badge.svg?branch=main)](https://github.com/adelenneb/order-product-microservices/actions/workflows/cd.yml)
 
 
 
@@ -119,6 +118,6 @@ mvn -pl services/api-gateway spring-boot:run
 
 ## CI/CD (GitHub Actions)
 - **CI** (`ci.yml`) : `mvn -B verify` sur chaque push/PR.
-- **CD** (`cd.yml`) : build & push des images Docker (tags `latest` + SHA) vers Docker Hub, puis déploiement optionnel vers Kubernetes si les secrets sont fournis.
+- **CD** (`cd.yml`) : build & push des images Docker (tags `latest` + SHA) vers Docker Hub, puis deploiement optionnel vers Kubernetes si les secrets sont fournis.
 - Secrets requis : `DOCKERHUB_USERNAME`, `DOCKERHUB_TOKEN`, `KUBE_CONFIG` (base64 du kubeconfig du cluster), `K8S_NAMESPACE` (ex: `default`).
-- Déclencher : push sur `main/master` ou “Run workflow” manuel dans l’onglet Actions.
+- Declencher : push sur `main/master` ou "Run workflow" manuel dans l'onglet Actions.
