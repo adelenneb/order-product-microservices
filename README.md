@@ -1,4 +1,9 @@
 # Order Product Microservices
+![CI](https://github.com/adelenneb/order-product-microservices/actions/workflows/ci.yml/badge.svg)
+
+![CD](https://github.com/adelenneb/order-product-microservices/actions/workflows/cd.yml/badge.svg)
+
+
 ![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen?style=for-the-badge&logo=springboot&logoColor=white)
 ![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-2024.0.0-blue?style=for-the-badge&logo=spring&logoColor=white)
@@ -110,3 +115,9 @@ mvn -pl services/api-gateway spring-boot:run
 - Eureka UI: `open http://localhost:8761` (or your OS equivalent)
 - Direct product: `curl http://localhost:8081/api/products/1`
 - Direct order: `curl -X POST http://localhost:8082/api/orders -H "Content-Type: application/json" -d '{"productId":2,"quantity":1}'`
+
+## CI/CD (GitHub Actions)
+- **CI** (`ci.yml`) : `mvn -B verify` sur chaque push/PR.
+- **CD** (`cd.yml`) : build & push des images Docker (tags `latest` + SHA) vers Docker Hub, puis déploiement optionnel vers Kubernetes si les secrets sont fournis.
+- Secrets requis : `DOCKERHUB_USERNAME`, `DOCKERHUB_TOKEN`, `KUBE_CONFIG` (base64 du kubeconfig du cluster), `K8S_NAMESPACE` (ex: `default`).
+- Déclencher : push sur `main/master` ou “Run workflow” manuel dans l’onglet Actions.
