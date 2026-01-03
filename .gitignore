@@ -1,0 +1,12 @@
+# Maven
+target/
+
+# IDE
+.idea/
+*.iml
+
+# Env
+.env
+
+# Logs
+*.log

@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - config-server-deployment.yaml
+  - config-server-service.yaml
+  - eureka-server-deployment.yaml
+  - eureka-server-service.yaml
+  - api-gateway-deployment.yaml
+  - api-gateway-service.yaml
+  - product-service-deployment.yaml
+  - product-service-service.yaml
+  - order-service-deployment.yaml
+  - order-service-service.yaml
