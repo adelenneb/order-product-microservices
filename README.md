@@ -1,7 +1,10 @@
 # Order Product Microservices
 ![CI](https://github.com/adelenneb/order-product-microservices/actions/workflows/ci.yml/badge.svg)
 
+
+
 ![CD](https://github.com/adelenneb/order-product-microservices/actions/workflows/cd.yml/badge.svg)
+
 
 
 ![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk&logoColor=white)
